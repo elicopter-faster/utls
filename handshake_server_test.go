@@ -180,7 +180,7 @@ func TestDontSelectECDSAWithRSAKey(t *testing.T) {
 		cipherSuites:       []uint16{TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA},
 		compressionMethods: []uint8{CompressionNone},
 		supportedCurves:    []CurveID{CurveP256},
-		supportedPoints:    []uint8{pointFormatUncompressed},
+		supportedPoints:    []uint8{PointFormatUncompressed},
 	}
 	serverConfig := testConfig.Clone()
 	serverConfig.CipherSuites = clientHello.cipherSuites
@@ -206,7 +206,7 @@ func TestDontSelectRSAWithECDSAKey(t *testing.T) {
 		cipherSuites:       []uint16{TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA},
 		compressionMethods: []uint8{CompressionNone},
 		supportedCurves:    []CurveID{CurveP256},
-		supportedPoints:    []uint8{pointFormatUncompressed},
+		supportedPoints:    []uint8{PointFormatUncompressed},
 	}
 	serverConfig := testConfig.Clone()
 	serverConfig.CipherSuites = clientHello.cipherSuites
@@ -288,7 +288,7 @@ func TestTLS12OnlyCipherSuites(t *testing.T) {
 		},
 		compressionMethods: []uint8{CompressionNone},
 		supportedCurves:    []CurveID{CurveP256, CurveP384, CurveP521},
-		supportedPoints:    []uint8{pointFormatUncompressed},
+		supportedPoints:    []uint8{PointFormatUncompressed},
 	}
 
 	c, s := localPipe(t)
