@@ -20,7 +20,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/bogdanfinn/utls/cpu"
+	"github.com/elicopter-faster/utls/cpu"
 )
 
 const (

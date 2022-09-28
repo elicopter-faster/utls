@@ -8,7 +8,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/bogdanfinn/utls/cpu"
+	"github.com/elicopter-faster/utls/cpu"
 )
 
 func TestAMD64minimalFeatures(t *testing.T) {
